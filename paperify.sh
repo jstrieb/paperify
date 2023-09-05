@@ -1,5 +1,12 @@
 #!/bin/sh
 
+###############################################################################
+# Created by Jacob Strieb                                                     #
+# September 2023                                                              #
+#                                                                             #
+# https://github.com/jstrieb/paperify                                         #
+###############################################################################
+
 if sh "set -o pipefail" > /dev/null 2>&1; then
   set -o pipefail
 fi
