@@ -19,7 +19,7 @@ template for added realism.
 
 # Install
 
-First, install the dependencies:
+First, install the dependencies (or [use Docker](#docker)):
 
 - curl
 - Python 3
@@ -86,6 +86,22 @@ paperify -h
     "https://standardebooks.org/ebooks/jack-london/the-call-of-the-wild/downloads/jack-london_the-call-of-the-wild.epub" \
     london.pdf
   ```
+
+## Docker
+
+Alternatively, run Paperify from within a Docker container. To run the first
+example from within Docker and build to `./build/cox.pdf`:
+
+``` bash
+docker run \
+  --rm \
+  -it \
+  --volume "$(pwd)/build":/root/build \
+  jstrieb/paperify \
+    --from-format html \
+    "https://research.swtch.com/bell-labs" \
+    build/cox.pdf
+```
 
 
 # Usage
